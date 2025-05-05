@@ -1,0 +1,19 @@
+[general]
+import = [
+"~/.config/alaritty/catppuccin-mocha.toml"
+]
+
+[window]
+opacity=0.9
+
+[env]
+TERM = "xterm-256color"
+
+[font.normal]
+family = "JetBrainsMono NF"
+
+[keyboard]
+bindings = [
+    {key = "Right", mods = "Control", chars = "\u001BF"},
+    {key = "Left", mods = "Control", chars = "\u001BB"}
+]
