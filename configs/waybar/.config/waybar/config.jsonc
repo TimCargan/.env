@@ -5,7 +5,7 @@
   "margin-right": 10,
   "modules-left": ["idle_inhibitor", "cpu", "memory", "custom/gpu-usage"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["network", "pulseaudio", "battery", "clock"],
+  "modules-right": ["network", "pulseaudio", "battery", "clock",  "custom/notification"],
 
   "idle_inhibitor": {
     "format": "{icon}",
@@ -85,10 +85,10 @@
   },
   "network": {
     "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
-    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
+    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span>",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>",
+    "tooltip-format-wifi": "SSID:{essid}\nSignal Strenght: {signalStrength}%"
   },
   "pulseaudio": {
       "format": "{icon}{volume:3d}%",
@@ -104,5 +104,26 @@
       "return-type": "json",
       "on-click": "alacritty -e nvtop",
       "max-length": 10
-    }
+    },
+
+ "custom/notification": {
+    "tooltip": false,
+    "format": " {icon} ",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
 }
