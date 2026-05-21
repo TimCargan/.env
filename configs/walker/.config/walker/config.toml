@@ -77,7 +77,7 @@ provider = "calc"
 
 [[providers.prefixes]]
 prefix = "@"
-provider = "websearch"
+provider = "bitwarden"
 
 [[providers.prefixes]]
 prefix = ":"
@@ -210,8 +210,8 @@ bookmarks = [
 ]
 
 bitwarden = [
-  { action = "copypassword", label = "copy password", default = true, bind = "Return" },
-  { action = "typepassword", label = "type password", default = true, bind = "ctrl p" },
+  { action = "copypassword", label = "copy password", default = true, bind = "ctrl c" },
+  { action = "typepassword", label = "type password", default = true, bind = "Return" },
   { action = "copyusername", label = "copy username", bind = "shift Return" },
   { action = "typeusername", label = "type username", bind = "ctrl u" },
   { action = "copyotp", label = "copy 2fa", bind = "ctrl Return" },

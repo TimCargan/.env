@@ -29,7 +29,7 @@
   "transition-time": 200,
   "hide-on-clear": false,
   "hide-on-action": true,
-  "text-empty": "No Notifications",
+  "text-empty": "No Notifications!",
   "script-fail-notify": true,
   "scripts": {
     "example-script": {
@@ -53,6 +53,7 @@
     "inhibitors",
     "title",
     "dnd",
+    "buttons-grid",
     "mpris",
     "notifications",
      "title#ca"
@@ -64,7 +65,7 @@
       "clear-all-button": true
     },
     "title": {
-      "text": "Notifcatons",
+      "text": "My Notifcatons",
       "clear-all-button": false,
       "button-text": "Clear All"
     },
